@@ -1,8 +1,10 @@
 /*
  * Copyright (c) 2012 University of Tartu
+ * Minor changes by Miklas Boskamp 
  */
 package org.jbibtex;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Map;
 
@@ -76,7 +78,23 @@ public class BibTeXEntry extends BibTeXObject {
 	public Map<Key, Value> getFields(){
 		return Collections.unmodifiableMap(this.fields);
 	}
-
+	
+	public static ArrayList<Key> getTypes(){
+		return types;
+	}
+	
+	public static ArrayList<String> getTypesAsString(){
+		ArrayList<String> typesAsString = new ArrayList<String>();
+		
+		for (Key key : types) {
+			String value = key.getValue();
+			value = value.substring(0, 1).toUpperCase() + value.substring(1);
+			typesAsString.add(value);
+		}
+		
+		return typesAsString;
+	}
+ 
 	public static final Key TYPE_ARTICLE = new Key("article");
 	public static final Key TYPE_BOOK = new Key("book");
 	public static final Key TYPE_BOOKLET = new Key("booklet");
@@ -91,6 +109,23 @@ public class BibTeXEntry extends BibTeXObject {
 	public static final Key TYPE_PROCEEDINGS = new Key("proceedings");
 	public static final Key TYPE_TECHREPORT = new Key("techreport");
 	public static final Key TYPE_UNPUBLISHED = new Key("unpublished");
+	
+	public static final ArrayList<Key> types = new ArrayList<Key>() {{
+	    add(TYPE_ARTICLE);
+	    add(TYPE_BOOK);
+	    add(TYPE_BOOKLET);
+	    add(TYPE_CONFERENCE);
+	    add(TYPE_INBOOK);
+	    add(TYPE_INCOLLECTION);
+	    add(TYPE_INPROCEEDINGS);
+	    add(TYPE_MANUAL);
+	    add(TYPE_MASTERSTHESIS);
+	    add(TYPE_MISC);
+	    add(TYPE_PHDTHESIS);
+	    add(TYPE_PROCEEDINGS);
+	    add(TYPE_TECHREPORT);
+	    add(TYPE_UNPUBLISHED);
+	}};
 
 	public static final Key KEY_ADDRESS = new Key("address");
 	public static final Key KEY_ANNOTE = new Key("annote");
