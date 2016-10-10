@@ -91,10 +91,56 @@ public class BibTeXEntry extends BibTeXObject {
 			value = value.substring(0, 1).toUpperCase() + value.substring(1);
 			typesAsString.add(value);
 		}
-		
 		return typesAsString;
 	}
+	
+	public static ArrayList<Key> getKeys(){
+		return keys;
+	}
+	
+	public static ArrayList<String> getKeysAsString(){
+		ArrayList<String> keysAsString = new ArrayList<String>();
+		
+		for (Key key : keys) {
+			String value = key.getValue();
+			value = value.substring(0, 1).toUpperCase() + value.substring(1);
+			keysAsString.add(value);
+		}
+		return keysAsString;
+	}
  
+	public Entry getEntry(){
+		Entry entry = new Entry();
+		Map<Key, Value> map = getFields();
+		entry.setAddress(map.get(KEY_ADDRESS));
+		entry.setAnnote(map.get(KEY_ANNOTE));
+		entry.setAuthor(map.get(KEY_AUTHOR));
+		entry.setBooktitle(map.get(KEY_BOOKTITLE));
+		entry.setChapter(map.get(KEY_CHAPTER));
+		entry.setCrossref(map.get(KEY_CROSSREF));
+		entry.setDoi(map.get(KEY_DOI));
+		entry.setEdition(map.get(KEY_EDITION));
+		entry.setEditor(map.get(KEY_EDITOR));
+		entry.setEprint(map.get(KEY_EPRINT));
+		entry.setHowpublished(map.get(KEY_HOWPUBLISHED));
+		entry.setInstitution(map.get(KEY_INSTITUTION));
+		entry.setJournal(map.get(KEY_JOURNAL));
+		entry.setMonth(map.get(KEY_MONTH));
+		entry.setNote(map.get(KEY_NOTE));
+		entry.setNumber(map.get(KEY_NUMBER));
+		entry.setOrganization(map.get(KEY_ORGANIZATION));
+		entry.setPages(map.get(KEY_PAGES));
+		entry.setPublisher(map.get(KEY_PUBLISHER));
+		entry.setSchool(map.get(KEY_SCHOOL));
+		entry.setSeries(map.get(KEY_SERIES));
+		entry.setTitle(map.get(KEY_TITLE));
+		entry.setType(map.get(KEY_TYPE));
+		entry.setUrl(map.get(KEY_URL));
+		entry.setVolume(map.get(KEY_VOLUME));
+		entry.setYear(map.get(KEY_YEAR));
+		return entry;
+	}
+	
 	public static final Key TYPE_ARTICLE = new Key("article");
 	public static final Key TYPE_BOOK = new Key("book");
 	public static final Key TYPE_BOOKLET = new Key("booklet");
@@ -154,4 +200,33 @@ public class BibTeXEntry extends BibTeXObject {
 	public static final Key KEY_URL = new Key("url");
 	public static final Key KEY_VOLUME = new Key("volume");
 	public static final Key KEY_YEAR = new Key("year");
+	
+	public static final ArrayList<Key> keys = new ArrayList<Key>() {{
+	    add(KEY_ADDRESS);
+	    add(KEY_ANNOTE);
+	    add(KEY_AUTHOR);
+	    add(KEY_BOOKTITLE);
+	    add(KEY_CHAPTER);
+	    add(KEY_CROSSREF);
+	    add(KEY_DOI);
+	    add(KEY_EDITION);
+	    add(KEY_EDITOR);
+	    add(KEY_EPRINT);
+	    add(KEY_HOWPUBLISHED);
+	    add(KEY_INSTITUTION);
+	    add(KEY_JOURNAL);
+	    add(KEY_MONTH);
+	    add(KEY_NOTE);
+	    add(KEY_NUMBER);
+	    add(KEY_ORGANIZATION);
+	    add(KEY_PAGES);
+	    add(KEY_PUBLISHER);
+	    add(KEY_SCHOOL);
+	    add(KEY_SERIES);
+	    add(KEY_TITLE);
+	    add(KEY_TYPE);
+	    add(KEY_URL);
+	    add(KEY_VOLUME);
+	    add(KEY_YEAR);
+	}};
 }
