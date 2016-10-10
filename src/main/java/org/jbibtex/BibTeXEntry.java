@@ -15,8 +15,7 @@ public class BibTeXEntry extends BibTeXObject {
 	private Key key = null;
 
 	private KeyMap<Value> fields = new KeyMap<Value>();
-
-
+	
 	public BibTeXEntry(Key type, Key key){
 		setType(type);
 		setKey(key);

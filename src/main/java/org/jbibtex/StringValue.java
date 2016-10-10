@@ -13,6 +13,12 @@ public class StringValue extends LiteralValue {
 
 		setStyle(style);
 	}
+	
+	public StringValue(String string){
+		super(string);
+
+		setStyle(Style.QUOTED);
+	}
 
 	@Override
 	protected String format(){
