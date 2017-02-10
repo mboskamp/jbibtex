@@ -200,6 +200,7 @@ public class BibTeXEntry extends BibTeXObject {
 	public static final Key KEY_VOLUME = new Key("volume");
 	public static final Key KEY_YEAR = new Key("year");
 	
+	@SuppressWarnings("serial")
 	public static final ArrayList<Key> keys = new ArrayList<Key>() {{
 	    add(KEY_ADDRESS);
 	    add(KEY_ANNOTE);

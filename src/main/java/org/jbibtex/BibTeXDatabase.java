@@ -36,8 +36,7 @@ public class BibTeXDatabase {
 
 		if(object instanceof BibTeXEntry){
 			BibTeXEntry entry = (BibTeXEntry)object;
-
-			success = this.entries.putIfMissing(entry.getKey(), entry);
+			success = true;
 		} else
 
 		{
