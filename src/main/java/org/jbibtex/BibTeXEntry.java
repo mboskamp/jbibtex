@@ -155,6 +155,7 @@ public class BibTeXEntry extends BibTeXObject {
 	public static final Key TYPE_TECHREPORT = new Key("techreport");
 	public static final Key TYPE_UNPUBLISHED = new Key("unpublished");
 	
+	@SuppressWarnings("serial")
 	public static final ArrayList<Key> types = new ArrayList<Key>() {{
 	    add(TYPE_ARTICLE);
 	    add(TYPE_BOOK);

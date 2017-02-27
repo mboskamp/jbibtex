@@ -1,5 +1,8 @@
 package org.jbibtex;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Entry {
 	private Value address;
 	private Value annote;
@@ -243,7 +246,38 @@ public class Entry {
 	public Value[] getValues() {
 		Value[] values = { address, annote, author, booktitle, chapter, crossref, doi, edition, editor, eprint,
 				howpublished, institution, journal, month, note, number, organization, pages, publisher, school, series,
-				title, type, url, volume, year };
+				title, type, url, volume, year};
+		return values;
+	}
+	
+	public Map<String, Value> getValuesMap(){
+		HashMap<String, Value> values = new HashMap<String, Value>();
+		values.put("address", address);
+		values.put("annote", annote);
+		values.put("author", author);
+		values.put("booktitle", booktitle);
+		values.put("chapter", chapter);
+		values.put("crossref", crossref);
+		values.put("doi", doi);
+		values.put("edition", edition);
+		values.put("editor", editor);
+		values.put("eprint", eprint);
+		values.put("howpublished", howpublished);
+		values.put("institution", institution);
+		values.put("journal", journal);
+		values.put("month", month);
+		values.put("note", note);
+		values.put("number", number);
+		values.put("organization", organization);
+		values.put("pages", pages);
+		values.put("publisher", publisher);
+		values.put("school", school);
+		values.put("series", series);
+		values.put("title", title);
+		values.put("type", type);
+		values.put("url", url);
+		values.put("volume", volume);
+		values.put("year", year);
 		return values;
 	}
 }
