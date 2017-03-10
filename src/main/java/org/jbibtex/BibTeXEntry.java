@@ -173,33 +173,33 @@ public class BibTeXEntry extends BibTeXObject {
 	    add(TYPE_UNPUBLISHED);
 	}};
 
-	public static final Key KEY_ADDRESS = new Key("address");
-	public static final Key KEY_ANNOTE = new Key("annote");
-	public static final Key KEY_AUTHOR = new Key("author");
-	public static final Key KEY_BOOKTITLE = new Key("booktitle");
-	public static final Key KEY_CHAPTER = new Key("chapter");
-	public static final Key KEY_CROSSREF = new Key("crossref");
+	public static final Key KEY_ADDRESS = new Key("Adresse");
+	public static final Key KEY_ANNOTE = new Key("Annotation");
+	public static final Key KEY_AUTHOR = new Key("Autor");
+	public static final Key KEY_BOOKTITLE = new Key("Buchtitel");
+	public static final Key KEY_CHAPTER = new Key("Kapitel");
+	public static final Key KEY_CROSSREF = new Key("Referenz");
 	public static final Key KEY_DOI = new Key("doi");
-	public static final Key KEY_EDITION = new Key("edition");
-	public static final Key KEY_EDITOR = new Key("editor");
+	public static final Key KEY_EDITION = new Key("Ausgabe");
+	public static final Key KEY_EDITOR = new Key("Redakteur");
 	public static final Key KEY_EPRINT = new Key("eprint");
-	public static final Key KEY_HOWPUBLISHED = new Key("howpublished");
-	public static final Key KEY_INSTITUTION = new Key("institution");
-	public static final Key KEY_JOURNAL = new Key("journal");
-	public static final Key KEY_KEY = new Key("key");
-	public static final Key KEY_MONTH = new Key("month");
-	public static final Key KEY_NOTE = new Key("note");
-	public static final Key KEY_NUMBER = new Key("number");
-	public static final Key KEY_ORGANIZATION = new Key("organization");
-	public static final Key KEY_PAGES = new Key("pages");
-	public static final Key KEY_PUBLISHER = new Key("publisher");
-	public static final Key KEY_SCHOOL = new Key("school");
-	public static final Key KEY_SERIES = new Key("series");
-	public static final Key KEY_TITLE = new Key("title");
-	public static final Key KEY_TYPE = new Key("type");
+	public static final Key KEY_HOWPUBLISHED = new Key("Veröffentlicht als");
+	public static final Key KEY_INSTITUTION = new Key("Institution");
+	public static final Key KEY_JOURNAL = new Key("Zeitschrift");
+	public static final Key KEY_KEY = new Key("Schlüssel");
+	public static final Key KEY_MONTH = new Key("Monat");
+	public static final Key KEY_NOTE = new Key("Notiz");
+	public static final Key KEY_NUMBER = new Key("Nummer");
+	public static final Key KEY_ORGANIZATION = new Key("Organisation");
+	public static final Key KEY_PAGES = new Key("Seiten");
+	public static final Key KEY_PUBLISHER = new Key("Herausgeber");
+	public static final Key KEY_SCHOOL = new Key("Schule");
+	public static final Key KEY_SERIES = new Key("Reihe");
+	public static final Key KEY_TITLE = new Key("Titel");
+	public static final Key KEY_TYPE = new Key("Typ");
 	public static final Key KEY_URL = new Key("url");
-	public static final Key KEY_VOLUME = new Key("volume");
-	public static final Key KEY_YEAR = new Key("year");
+	public static final Key KEY_VOLUME = new Key("Band");
+	public static final Key KEY_YEAR = new Key("Jahr");
 	
 	@SuppressWarnings("serial")
 	public static final ArrayList<Key> keys = new ArrayList<Key>() {{
